@@ -352,6 +352,13 @@ if __name__ == '__main__':
 
     # init model
     model = make_model(opt)
+    # from fvcore.nn import FlopCountAnalysis, flop_count_table
+    # input1 = torch.randn(1,3,128,128)
+    # input2 = torch.randn(1,3,384,384)
+    # flops = FlopCountAnalysis(model, (input1, input2))
+    # print(flop_count_table(flops))
+
+
     model = model.cuda()
     
     # init loss
