@@ -22,7 +22,12 @@ model = dict(
         output_size=[576, 576],
     ),
     loss=dict(
-        cls_loss=dict(type="BalanceLoss", center_R=31, neg_weight=130),
+        cls_loss=dict(type="BalanceLoss",
+                      loss_type="focalloss",
+                      gamma=2,
+                      alpha=5,
+                      center_R=31,
+                      neg_weight=130),
     ),
 )
 
